@@ -1,3 +1,5 @@
+"use client"
+
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -9,9 +11,9 @@ import SparkleIcon from "@/assets/icons/sparkle.svg";
 export const HeroSection = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none">
         <div
-          className="absolute inset-0 -z-30 opacity-5"
+          className="absolute inset-0  opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
         ></div>
         <div className="size-[620px] hero-ring"></div>
@@ -57,7 +59,7 @@ export const HeroSection = () => {
             className="size-[100px]"
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
-            <div className="bg-green-500 size-2.5 rounded-full" />
+            <div className="bg-green-500 size-2.5 rounded-full animate-pulse" />
             <div className="text-sm font-semibold">
               Available for new projects
             </div>
@@ -73,11 +75,11 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="z-10 inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="z-10 inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl cursor-pointer">
+          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
             <span>👋</span>
             <span className="font-semibold">Let's Connect</span>
           </button>
