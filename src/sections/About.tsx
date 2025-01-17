@@ -1,17 +1,12 @@
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
-import StarIcon from "@/assets/icons/star.svg";
-import bookImage from "@/assets/images/book-cover.png";
-import Image from "next/image";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
-import TechIcon from "@/components/TechIcon";
-import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-smile.png";
+import NextImage from "@/assets/icons/nextjs.svg";
 import CardHeader from "@/components/CardHeader";
 import ToolBoxItems from "@/components/ToolBoxItems";
 
@@ -100,12 +95,12 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
-                title="My Reads"
-                description="Explore the books shaping my perspectives."
+                title="My Passion"
+                description="Building character through discipline"
                 
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={bookImage} alt="Book Cover" />
+                <span className="text-9xl text-center">🥋</span>
               </div>
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
@@ -133,10 +128,10 @@ export const AboutSection = () => {
               {hobbies.map((hobbie) => (
                 <div
                   key={hobbie.title}
-                  className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                  className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-indigo-700 to-sky-600 rounded-full py-1.5 absolute"
                   style={{ left: hobbie.left, top: hobbie.top }}
                 >
-                  <span className="font-medium text-gray-950">
+                  <span className="font-medium text-white">
                     {hobbie.title}
                   </span>
                   <span>{hobbie.emoji}</span>
@@ -144,14 +139,15 @@ export const AboutSection = () => {
               ))}
             </div>
           </Card>
-          <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+          <Card className="h-[320px] md:col-span-2 lg:col-span-1 bg-indigo-700">
             <CardHeader
               title="Never Stop Learning"
               description="Currently mastering Next.js"
               className="px-6 pt-6"
+              isIndigo
             />
-            <div className="w-40 mx-auto mt-8">
-              <Image src={mapImage} alt="Map" />
+            <div className="w-40 mx-auto mt-2 md:mt-0 flex justify-center">
+              <NextImage />
             </div>
           </Card>
           </div>

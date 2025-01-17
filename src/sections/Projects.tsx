@@ -1,12 +1,11 @@
 "use client";
 
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import darkSaasLandingPage from "@/assets/images/notaria.png";
+import lightSaasLandingPage from "@/assets/images/datamind.png";
+import aiStartupLandingPage from "@/assets/images/awwwards.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 
@@ -53,17 +52,24 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
       <div className="container">
-        <SectionHeader eyebrow="Real-world Results" title="Featured Projects" description="See how i transformed concepts into engaging digital experiences."/>
-        
+        <SectionHeader
+          eyebrow="Real-world Results"
+          title="Featured Projects"
+          description="See how i transformed concepts into engaging digital experiences."
+        />
+
         <div className="flex flex-col mt-10 gap-20 md:mt-20">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, i) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 "
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              style={{
+                top: `calc(64px + ${i * 40}px)`
+              }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                  <div className="bg-gradient-to-r from-indigo-700 to-sky-600 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                     <span>{project.company}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>
@@ -84,9 +90,17 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
                   <a href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>View Code</span>
-                      <ArrowUpRight className="size-4 ml-2" />
+                    <button className="group relative z-10 bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                      <span className="relative inline-flex overflow-hidden font-general text-xs uppercase">
+                        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12 flex">
+                          <span>View Code</span>
+                          <ArrowUpRight className="size-4 ml-2" />
+                        </div>
+                        <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0 flex">
+                          <span>View Code</span>
+                          <ArrowUpRight className="size-4 ml-2" />
+                        </div>
+                      </span>
                     </button>
                   </a>
                 </div>
