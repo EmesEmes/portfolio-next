@@ -1,7 +1,7 @@
 "use client";
 
-import darkSaasLandingPage from "@/assets/images/notaria.png";
-import lightSaasLandingPage from "@/assets/images/datamind.png";
+import notaryImage from "@/assets/images/notaria.png";
+import dataMindImage from "@/assets/images/datamind.png";
 import aiStartupLandingPage from "@/assets/images/awwwards.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -11,39 +11,39 @@ import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
+    company: "Notary 22 Quito",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Landing Page",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Astro" },
+      { title: "Tailwind CSS" },
+      { title: "SEO" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://www.notaria22quito.com/",
+    image: notaryImage,
+  },
+  {
+    company: "Class Project",
+    year: "2024",
+    title: "Winning Project",
+    results: [
+      { title: "Pure HTML" },
+      { title: "Pure CSS" },
+      { title: "Scroll Driven Animations" },
+    ],
+    link: "https://datamind-sigma.vercel.app/",
+    image: dataMindImage,
+  },
+  {
+    company: "Online Course Project",
+    year: "2024",
+    title: "Modern Design",
+    results: [
+      { title: "React" },
+      { title: "GSAP" },
+      { title: "Incredible Animations" },
+    ],
+    link: "https://awards-ten.vercel.app/",
     image: aiStartupLandingPage,
   },
 ];
@@ -89,7 +89,7 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
                     <button className="group relative z-10 bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span className="relative inline-flex overflow-hidden font-general text-xs uppercase">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12 flex">

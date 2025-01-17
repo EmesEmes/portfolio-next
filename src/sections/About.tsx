@@ -142,7 +142,7 @@ export const AboutSection = () => {
           <Card className="h-[320px] md:col-span-2 lg:col-span-1 bg-indigo-700">
             <CardHeader
               title="Never Stop Learning"
-              description="Currently mastering Next.js"
+              description="Currently mastering"
               className="px-6 pt-6"
               isIndigo
             />
