@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 export function CardsApproach() {
   return (
     <>
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-gray-900 w-full gap-4 mx-auto px-8">
+      <div className="pt-20 flex flex-col lg:flex-row items-center justify-center bg-gray-900 w-full gap-4 mx-auto px-8">
         <Card
           title="Planning & Strategy"
           des="We'll collaborate to map out your website's goals, target audience, 

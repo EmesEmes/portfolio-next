@@ -1,3 +1,4 @@
+import { AboutSection } from "@/sections/About";
 import MyApproach from "@/sections/Approach";
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <ProjectsSection />
       <TapeSection />
       <MyApproach />
+      <AboutSection />
     </div>
   );
 }

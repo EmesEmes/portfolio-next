@@ -1,12 +1,13 @@
 
 
 import { CardsApproach } from '@/components/CardsApproach'
+import SectionHeader from '@/components/SectionHeader'
 import React from 'react'
 
 const MyApproach = () => {
   return (
     <section className='pb-16 lg:py-24'>
-      <p className='font-serif text-3xl text-center mt-6 md:text-5xl'>My Approach</p>
+      <SectionHeader eyebrow='How i take a challenge' title='My Approach'/>
       <CardsApproach />
     </section>
   )
