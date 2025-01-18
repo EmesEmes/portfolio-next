@@ -9,7 +9,7 @@ export function MacbookScrollDemo() {
       <MacbookScroll
         title={
           <span>
-            Joy for Code. 
+            Passion for Programming ❤️ 
           </span>
         }
       />

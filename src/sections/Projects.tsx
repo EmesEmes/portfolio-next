@@ -3,6 +3,7 @@
 import notaryImage from "@/assets/images/notaria.png";
 import dataMindImage from "@/assets/images/datamind.png";
 import aiStartupLandingPage from "@/assets/images/awwwards.png";
+import iphoneImage from "@/assets/images/iphone.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
@@ -41,21 +42,33 @@ const portfolioProjects = [
     results: [
       { title: "React" },
       { title: "GSAP" },
-      { title: "Incredible Animations" },
+      { title: "Tailwind" },
     ],
     link: "https://awards-ten.vercel.app/",
     image: aiStartupLandingPage,
+  },
+  {
+    company: "Iphone 15 Clone",
+    year: "2024",
+    title: "3D Models",
+    results: [
+      { title: "React" },
+      { title: "Three.js" },
+      { title: "GSAP" },
+    ],
+    link: "https://iphone-clone-delta.vercel.app/",
+    image: iphoneImage,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="projects">
       <div className="container">
         <SectionHeader
-          eyebrow="Real-world Results"
-          title="Featured Projects"
-          description="See how i transformed concepts into engaging digital experiences."
+          eyebrow="Achieving Results That Matter"
+          title="Some Of My Projects"
+          description="Discover how I turn ideas into captivating digital solutions."
         />
 
         <div className="flex flex-col mt-10 gap-20 md:mt-20">
@@ -93,11 +106,11 @@ export const ProjectsSection = () => {
                     <button className="group relative z-10 bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span className="relative inline-flex overflow-hidden font-general text-xs uppercase">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12 flex">
-                          <span>View Code</span>
+                          <span>View Live Site</span>
                           <ArrowUpRight className="size-4 ml-2" />
                         </div>
                         <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0 flex">
-                          <span>View Code</span>
+                          <span>View Live Site</span>
                           <ArrowUpRight className="size-4 ml-2" />
                         </div>
                       </span>

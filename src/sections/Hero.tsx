@@ -1,7 +1,5 @@
-"use client"
+"use client";
 
-import memojiImage from "@/assets/images/memoji-computer.png";
-import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
@@ -15,7 +13,10 @@ import NodeImage from "@/assets/icons/node.svg";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <section
+      id="home"
+      className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
+    >
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none">
         <div
           className="absolute inset-0  opacity-5"
@@ -25,7 +26,7 @@ export const HeroSection = () => {
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
         <div className="size-[1220px] hero-ring"></div>
-        <HeroOrbit size={800} rotation={-72} shouldOrbit spinDuration={25} >
+        <HeroOrbit size={800} rotation={-72} shouldOrbit spinDuration={25}>
           <Js className="size-20 text-indigo-700" />
         </HeroOrbit>
         <HeroOrbit size={550} rotation={20} shouldOrbit spinDuration={20}>
@@ -34,8 +35,14 @@ export const HeroSection = () => {
         <HeroOrbit size={460} rotation={120} shouldOrbit isReverse>
           <NodeImage className="size-10 text-indigo-700" />
         </HeroOrbit>
-        <HeroOrbit size={590} rotation={98} shouldOrbit spinDuration={10} isReverse>
-          <ReactImage className="size-24 text-indigo-700"/>
+        <HeroOrbit
+          size={590}
+          rotation={98}
+          shouldOrbit
+          spinDuration={10}
+          isReverse
+        >
+          <ReactImage className="size-24 text-indigo-700" />
         </HeroOrbit>
         <HeroOrbit size={430} rotation={-14} shouldOrbit spinDuration={15}>
           <AstroImage className="size-12 text-indigo-700" />
@@ -46,7 +53,13 @@ export const HeroSection = () => {
         <HeroOrbit size={530} rotation={178}>
           <StarIcon className="size-10 text-indigo-700" />
         </HeroOrbit>
-        <HeroOrbit size={710} rotation={144} shouldOrbit spinDuration={15} isReverse>
+        <HeroOrbit
+          size={710}
+          rotation={144}
+          shouldOrbit
+          spinDuration={15}
+          isReverse
+        >
           <TailwindImage className="size-24 text-indigo-700" />
         </HeroOrbit>
         <HeroOrbit size={720} rotation={85}>
@@ -61,11 +74,7 @@ export const HeroSection = () => {
       </div>
       <div className="container">
         <div className="flex flex-col items-center">
-          <Image
-            src={memojiImage}
-            alt="Memoji with computer"
-            className="size-[100px]"
-          />
+          <span className="text-9xl">👨🏻‍💻</span>
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
             <div className="bg-green-500 size-2.5 rounded-full animate-pulse" />
             <div className="text-sm font-semibold">
@@ -75,24 +84,28 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
+            Crafting Outstanding Digital Experiences
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in tranforming designs into functional, high-performing
-            web applications. Let's discuss your next project.
+            I excel at turning creative concepts into dynamic, user-friendly web
+            experiences. Ready to bring your vision to life?
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span>👋</span>
-            <span className="font-semibold">Let's Connect</span>
-          </button>
+          <a href="#projects">
+            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+              <span className="font-semibold">Explore My Work</span>
+              <ArrowDown className="size-4" />
+            </button>
+          </a>
+          <a href="#contact">
+            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+              <span>👋</span>
+              <span className="font-semibold">Let's Connect</span>
+            </button>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
