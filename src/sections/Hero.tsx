@@ -84,11 +84,10 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Crafting Outstanding Digital Experiences
+            Hi, I'm <span className="text-indigo-700">Emilio Esteban</span>
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I excel at turning creative concepts into dynamic, user-friendly web
-            experiences. Ready to bring your vision to life?
+          Software developer located in Quito - Ecuador, passionate about Front-End and future Full Stack.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
